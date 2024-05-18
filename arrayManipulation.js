@@ -23,16 +23,23 @@ for(let x=0; x< numbers.length; x++){
 
 // A function has been added to work on the processed data and take a string as an argument in addition
 function formatArrayStrings(newArray,strings){
+//
 
+    if (newArray.length != strings.length ){
+        throw new Error("Both argument must be of the same length");
+    }
 // Loop through the processed array 
 for ( x=0; x<newArray.length; x++){
+    let newString =[];
+
     //if the number is even , the entire string is capitalize
     if( newArray[x] & 2 === 0){
-      return  strings.toUpperCase();
+       newString.push(strings.toUpperCase());
     }
     else{
-        return strings.tolowerCase();
+        newString.push(strings.tolowerCase());
     }
+    return newString;
 }
 
 
