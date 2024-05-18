@@ -21,4 +21,20 @@ for(let x=0; x< numbers.length; x++){
     return newArray;
 }
 
-console.log(processArray([1,2,3,4,5,6]));
+// A function has been added to work on the processed data and take a string as an argument in addition
+function formatArrayStrings(newArray,strings){
+
+// Loop through the processed array 
+for ( x=0; x<newArray.length; x++){
+    //if the number is even , the entire string is capitalize
+    if( newArray[x] & 2 === 0){
+      return  strings.toUpperCase();
+    }
+    else{
+        return strings.tolowerCase();
+    }
+}
+
+
+
+}
