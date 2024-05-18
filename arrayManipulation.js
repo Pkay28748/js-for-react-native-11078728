@@ -22,21 +22,22 @@ for(let x=0; x< numbers.length; x++){
 }
 
 // A function has been added to work on the processed data and take a string as an argument in addition
-function formatArrayStrings(newArray,strings){
-//
+function formatArrayStrings(newArray1,strings){
+// An error is thrown if the two parameters are of the same length
 
-    if (newArray.length != strings.length ){
+    if (newArray1.length != strings.length ){
         throw new Error("Both argument must be of the same length");
     }
 // Loop through the processed array 
-for ( x=0; x<newArray.length; x++){
+for ( x=0; x<newArray1.length; x++){
     let newString =[];
 
-    //if the number is even , the entire string is capitalize
-    if( newArray[x] & 2 === 0){
+    //if the number is even , the entire string is capitalized
+    if( newArray1[x] & 2 === 0){
        newString.push(strings.toUpperCase());
     }
     else{
+        // otherwise the entire string is converted to lowercase
         newString.push(strings.tolowerCase());
     }
     return newString;
@@ -45,3 +46,4 @@ for ( x=0; x<newArray.length; x++){
 
 
 }
+
